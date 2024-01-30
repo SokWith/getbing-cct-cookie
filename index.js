@@ -40,7 +40,7 @@ app.all('/', async (req, res) => {
   }
 });
 
-// Run the express app, listen on port 10000
-app.listen(10000, () => {
-  console.log('App is running on port 10000');
+// Run the express app, listen on port 7860
+app.listen(7860, () => {
+  console.log('App is running on port 7860');
 });
