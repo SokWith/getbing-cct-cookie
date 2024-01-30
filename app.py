@@ -23,6 +23,8 @@ def get_cookies():
       cookies = response.headers.get('Set-Cookie')
       # Join the cookies with semicolons
       cookies = cookies.replace(', ', '; ')
+      # Remove all occurrences of "Path=/"
+      cookies = cookies.replace('Path=/; ', '')
       # Create a JSON object with the cookies as a property
       result = {'result': {'cookies': cookies}}
       # Return the JSON object as the body of the response
