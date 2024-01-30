@@ -14,7 +14,7 @@ def get_cookies():
   # Loop until success or 10 times
   while not success and count < 10:
     # Fetch the cookies from the given URL
-    response = requests.get('https://proxybing.nbing.eu.org/turing/captcha/challenge')
+    response = requests.get('https://bing.cf03-b29.workers.dev/turing/captcha/challenge')
     # Check if the response is successful
     if response.ok:
       # Set the success flag to True
