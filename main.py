@@ -32,3 +32,7 @@ def get_cookies():
       count += 1
   # If the loop ends without success, return an error message
   return Response('Failed to get cookies', status=500)
+
+# 运行Flask应用，监听7860端口
+if __name__ == '__main__':
+    app.run(port=10000, debug=True)
