@@ -22,9 +22,10 @@ app.all('/', async (req, res) => {
       // Get the cookies from the response header
       let cookies = response.headers['set-cookie'];
       // Remove all the "Path=/" from the cookies
-      cookies = cookies.map(cookie => cookie.replace('Path=/', ''));
+      //cookies = cookies.map(cookie => cookie.replace('Path=/', ''));
       // Join the cookies with semicolons
-      cookies = cookies.join('; ');
+      //cookies = cookies.join('; ');
+      cookies = cookies.map(cookie => cookie.split(';')[0]).join(';');
       // Create a JSON object with the cookies as a property
       let result = {result: {cookies: cookies}};
       // Return the JSON object as the body of the response
