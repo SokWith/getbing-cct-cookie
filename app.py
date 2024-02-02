@@ -41,9 +41,9 @@ def get_cookies():
           key_value = item.split(";")[0]
       # 用分号 ; 把键值对添加到 cookie_str 中
           cookie_str += key_value + ";"
-      # 去掉 cookie_str 最后多余的一个分号
-          cookie_str = cookie_str[:-1]
         
+      # 去掉 cookie_str 最后多余的一个分号
+      cookie_str = cookie_str[:-1]
       # 赋值给变量 cookies
       cookies = cookie_str
       result = {'result': {'cookies': cookies}}
