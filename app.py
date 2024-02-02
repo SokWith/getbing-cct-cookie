@@ -36,11 +36,11 @@ def get_cookies():
       # 遍历 set_cookies 列表中的每个元素
       for item in set_cookies:
       # 用分号 ; 把每个元素分割成一个列表，取第一个元素，即键值对
-      key_value = item.split(";")[0]
+          key_value = item.split(";")[0]
       # 用分号 ; 把键值对添加到 cookie_str 中
-      cookie_str += key_value + ";"
+          cookie_str += key_value + ";"
       # 去掉 cookie_str 最后多余的一个分号
-      cookie_str = cookie_str[:-1]
+          cookie_str = cookie_str[:-1]
       # 赋值给变量 cookies
       cookies = cookie_str
       
