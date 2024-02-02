@@ -20,14 +20,24 @@ def get_cookies():
       # Set the success flag to True
       success = True
       # Get the cookies from the response header
-      cookies = response.headers.get('Set-Cookie')
+      # cookies = response.headers.get('Set-Cookie')
       # Join the cookies with semicolons
       # cookies = cookies.replace(', ', '; ')
       # Remove all occurrences of "Path=/"
       # cookies = cookies.replace('Path=/; ', '')
       # Create a JSON object with the cookies as a property
-      cookies = ';'.join([cookie.split(';')[0] for cookie in cookies.split(';')])
+      # cookies = ';'.join([cookie.split(';')[0] for cookie in cookies.split(';')])
       # cookies = ';'.join([re.sub(r';.*', '', cookie) for cookie in cookies.split(';')])
+      
+      # 发送请求，获取响应
+      response = requests.get("https://www.example.com")
+      # 从响应头中提取 set-cookies 列表
+      set_cookies = response.headers.getlist("Set-Cookie")
+      # 用分号 ; 连接 set-cookies 的键值对，忽略附属属性
+      cookie_str = ";".join([item.split(";")[0] for item in set_cookies])
+      # 赋值给变量 cookies
+      cookies = cookie_str
+      
       result = {'result': {'cookies': cookies}}
       # Return the JSON object as the body of the response
       return Response(json.dumps(result), mimetype='application/json')
