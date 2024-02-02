@@ -32,9 +32,9 @@ def get_cookies():
       # 发送请求，获取响应
       # response = requests.get("https://www.example.com")
       # 从响应头中提取 set-cookies 列表
-      set_cookies = response.headers.getlist("Set-Cookie")
+      set_cookies = response.headers.getlist('Set-Cookie')
       # 用分号 ; 连接 set-cookies 的键值对，忽略附属属性
-      cookie_str = ";".join([item.split(";")[0] for item in set_cookies])
+      cookie_str = ';'.join([item.split(';')[0] for item in set_cookies])
       # 赋值给变量 cookies
       cookies = cookie_str
       
