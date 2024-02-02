@@ -31,10 +31,12 @@ def get_cookies():
       
       # 从响应头中提取 set-cookies 列表
       set_cookies = response.headers.get('Set-Cookie')
+      # 用逗号 , 把 set_cookies 字符串分割成一个列表
+      set_cookies_list = set_cookies.split(",")
       # 定义一个空字符串，用来存储处理后的 cookie
       cookie_str = ""
       # 遍历 set_cookies 列表中的每个元素
-      for item in set_cookies:
+      for item in set_cookies_list:
       # 用分号 ; 把每个元素分割成一个列表，取第一个元素，即键值对
           key_value = item.split(";")[0]
       # 用分号 ; 把键值对添加到 cookie_str 中
