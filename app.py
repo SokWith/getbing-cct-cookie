@@ -43,9 +43,9 @@ def get_cookies():
           cookie_str += key_value + ";"
       # 去掉 cookie_str 最后多余的一个分号
           cookie_str = cookie_str[:-1]
+        
       # 赋值给变量 cookies
       cookies = cookie_str
-      
       result = {'result': {'cookies': cookies}}
       # Return the JSON object as the body of the response
       return Response(json.dumps(result), mimetype='application/json')
