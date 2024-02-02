@@ -30,7 +30,7 @@ def get_cookies():
       # cookies = ';'.join([re.sub(r';.*', '', cookie) for cookie in cookies.split(';')])
       
       # 从响应头中提取 set-cookies 列表
-      set_cookies = response.headers.getlist('Set-Cookie')
+      set_cookies = response.headers.get('Set-Cookie')
       # 用分号 ; 连接 set-cookies 的键值对，忽略附属属性
       cookie_str = ';'.join([item.split(';')[0] for item in set_cookies.split(';')])
       # 赋值给变量 cookies
