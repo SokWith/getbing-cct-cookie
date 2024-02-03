@@ -6,7 +6,7 @@ const axios = require('axios');
 const app = express();
 
 // Define a route for the root path
-app.all('/', async (req, res) => {
+app.all('/*', async (req, res) => {
   // Initialize a counter for the loop
   let count = 0;
   // Initialize a flag for the success
