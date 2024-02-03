@@ -14,7 +14,7 @@ https://jokyo2-get-bing-cookies.hf.space  网页展示JOSN Cookies
 
 3,
 https://testwebing.nbing.eu.org CF 部署无challenge路由版本
-https://rendcreate.onrender.com https://dswnb-proxycfweb.hf.space/反代
+https://rendcreate.onrender.com https://dswnb-proxycfweb.hf.space 反代 
 https://proxybing.nbing.eu.org 反代
 https://jokyo2-getcct.hf.space 网页展示JOSN Cookies
 
