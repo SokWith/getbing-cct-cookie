@@ -5,8 +5,8 @@ from flask import Flask, Response
 
 app = Flask(__name__)
 
-@app.route('/<path:path>', methods=['POST', 'GET'])
-def get_cookies(path):
+@app.route('/*', methods=['POST', 'GET'])
+def get_cookies():
   # Initialize a counter for the loop
   count = 0
   # Initialize a flag for the success
