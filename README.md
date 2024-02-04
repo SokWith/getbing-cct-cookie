@@ -18,3 +18,7 @@ https://rendcreate.onrender.com https://dswnb-proxycfweb.hf.space 反代
 https://proxybing.nbing.eu.org 反代
 https://jokyo2-getcct.hf.space 网页展示JOSN Cookies
 
+4,
+https://sokwith-proxybing.hf.space 反代www.bing.com
+https://bingchaptcha.nbing.eu.org CF反代/challenge
+https://getbing-cctcookie.vercel.app  返回 JSON Cookies
