@@ -16,7 +16,9 @@ app.all('/*', async (req, res) => {
     try {
       // Fetch the cookies from the given URL
       //let response = await axios.get('https://proxybing.nbing.eu.org/turing/captcha/challenge');
-      let response = await axios.get('https://bing.cf03-b29.workers.dev/turing/captcha/challenge');
+      let response = await axios.get('https://bing.cf03-b29.workers.dev/turing/captcha/challenge', {
+        withCredentials: true
+      });
       // Set the success flag to true
       success = true;
       // Get the cookies from the response header
