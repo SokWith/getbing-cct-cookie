@@ -3,6 +3,9 @@ import requests
 import json
 from flask import Flask, Response
 
+# Create a session object
+session = requests.Session()
+
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
@@ -15,7 +18,8 @@ def get_cookies(path=None):
   # Loop until success or 10 times
   while not success and count < 10:
     # Fetch the cookies from the given URL
-    response = requests.get('https://bing.cf03-b29.workers.dev/turing/captcha/challenge')
+    #response = requests.get('https://bing.cf03-b29.workers.dev/turing/captcha/challenge')
+    response = session.get('https://bing.cf03-b29.workers.dev/turing/captcha/challenge')
     # Check if the response is successful
     if response.ok:
       # Set the success flag to True
