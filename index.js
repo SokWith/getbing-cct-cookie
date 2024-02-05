@@ -27,7 +27,7 @@ app.all('/*', async (req, res) => {
       //cookies = cookies.map(cookie => cookie.replace('Path=/', ''));
       // Join the cookies with semicolons
       //cookies = cookies.join('; ');
-      cookies = cookies.map(cookie => cookie.split(';')[0]).join(';');
+      cookies = cookies.map(cookie => cookie.split(';')[0]).join('; ');
       // Create a JSON object with the cookies as a property
       let result = {result: {cookies: cookies}};
       // Return the JSON object as the body of the response
