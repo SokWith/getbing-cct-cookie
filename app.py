@@ -45,7 +45,7 @@ def get_cookies(path=None):
       # 用分号 ; 把每个元素分割成一个列表，取第一个元素，即键值对
           key_value = item.split(";")[0]
       # 用分号 ; 把键值对添加到 cookie_str 中
-          cookie_str += key_value + ";"
+          cookie_str += key_value + "; "
         
       # 去掉 cookie_str 最后多余的一个分号
       cookie_str = cookie_str[:-1]
