@@ -1,3 +1,5 @@
+获取NewBing 的cct cookie的构造方法：
+cct即人机验证
 1,
 https://testwebing.nbing.eu.org CF 部署无challenge路由版本
 https://rendcreate.onrender.com 反代 
