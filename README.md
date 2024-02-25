@@ -1,5 +1,6 @@
 获取NewBing 的cct cookie的构造方法：
 cct即人机验证
+
 1,
 https://testwebing.nbing.eu.org CF 部署无challenge路由版本
 https://rendcreate.onrender.com 反代 
@@ -24,3 +25,5 @@ https://jokyo2-getcct.hf.space 网页展示JOSN Cookies
 https://sokwith-proxybing.hf.space 反代www.bing.com
 https://bingchaptcha.nbing.eu.org CF反代/challenge
 https://getbing-cctcookie.vercel.app  https://jokyo2-getbingcct.hf.space 返回 JSON Cookies
+
+5,另外提供一个返回JSON Cookies 服务器：https://proxybing.nbing.eu.org/challenge/verify
