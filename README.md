@@ -26,4 +26,4 @@ https://sokwith-proxybing.hf.space 反代www.bing.com
 https://bingchaptcha.nbing.eu.org CF反代/challenge
 https://getbing-cctcookie.vercel.app  https://jokyo2-getbingcct.hf.space 返回 JSON Cookies
 
-5,另外提供一个返回JSON Cookies 服务器：https://proxybing.nbing.eu.org/challenge/verify
+5,另外提供一个返回JSON Cookies 服务器：https://cct.nbing.eu.org
