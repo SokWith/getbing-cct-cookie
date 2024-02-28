@@ -99,7 +99,23 @@ export default {
    * @returns
    */
   async fetch (request, env, ctx) {
+
+    //由于go-proxy-bingai项目base58加密验证作者信息，追加token返回：
     
+    const currentUrl = new URL(request.url);
+    const keytoken = {
+    T:'SjQH0q3MzCEXay9WfVPAdkL518iZcghu4Uteprwl7bxTvG6RsK2oYIFONDBmnJ',
+    TP:[21,58,22,34,0,51,58,37,20,54,16,41,29,16,14,33,24,46,7,60,5,16,54,27,28,44,1,26,57,21,46,49,19,45,16,14,3,26]
+  };
+    const jsonResult = JSON.stringify(keytoken);
+   
+    if (currentUrl.pathname.startsWith('/gettoken')) {
+    return new Response(jsonResult, {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+   });
+    }
+ 
     return await getfreeCookies(request);
     
   },
