@@ -19,17 +19,18 @@ function generateUUID() {
 
 async function getfreeCookies(request) {
   const uuid = generateUUID();
-  const oldUA = request.headers.get('user-agent') || '';
-  let freeisMobile = oldUA.includes('Mobile') || oldUA.includes('Android');
+//直接使用Mobile的user-agent获得更好的性能
+//  const oldUA = request.headers.get('user-agent') || '';
+//  let freeisMobile = oldUA.includes('Mobile') || oldUA.includes('Android');
   const newcctHeaders = new Headers();
-  if (freeisMobile = true) {
+//  if (freeisMobile = true) {
       newcctHeaders.set(
         'user-agent',
         'Mozilla/5.0 (iPhone; CPU iPhone OS 15_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.7 Mobile/15E148 Safari/605.1.15 BingSapphire/1.0.410427012'
       );
-    } else {
-      newcctHeaders.set('user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.35');
-    }
+//    } else {
+ //     newcctHeaders.set('user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.35');
+//    }
     const  challtargetUrl = new URL(BING_PROXY + '/turing/captcha/challenge?q=&iframeid=local-gen-' + uuid);
     const newcctReq = new Request(challtargetUrl, {
    //   method: request.method,
